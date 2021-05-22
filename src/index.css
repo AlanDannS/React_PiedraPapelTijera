@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+:root{
+  --azul-oscuro: #021855;
+  --azul-medio: #01BAD9;
+  --azul-claro: #00ebfe;
+  --morado: #cf2bd0;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--azul-oscuro);
+  text-align: center;
+  color: #fff;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.tablero{
+  width: 90%;
+  max-width: 1600px;
+  margin: 5% auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.tablero .tarjeta{
+  width: 335px;
+  height: 335px;
+  margin-top: 25px;
+  border: 3px solid var(--morado);
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+}
+
+.content-btn{
+  width: 100%;
+}
+
+.btn-reinicio{
+  width: 150px;
+  height: 50px;
+  background: var(--azul-oscuro);
+  border: 3px solid var(--azul-medio);
+  border-radius: 10px;
+  color: var(--azul-medio);
+  font-size: 30px;
+}
+
+.btn-reinicio:hover{
+  background: var(--azul-medio);
+  color: var(--azul-oscuro);
+}
+
+.opciones{
+  position: relative;
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  border: 3px solid var(--morado);
+  margin: 15% auto;
+}
+
+.espera{
+  display: block;
+  position: relative;
+  bottom: -15px;
+  font-size: 30px;
+  color: var(--azul-claro);
+}
+
+.btn{
+  width: 70px;
+  height: 70px;
+  border: 4px solid var(--azul-medio);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--azul-oscuro);
+  color: var(--azul-claro);
+  position: absolute;
+}
+
+.btn:hover{
+  border-color: var(--morado);
+  color: var(--morado);
+}
+
+.btn i{
+  font-size: 40px;
+}
+
+.opcion-rock{
+  top: -30px;
+  left: 50px;
+}
+
+.opcion-paper{
+  bottom: 10px;
+  right: 120px;
+}
+
+.opcion-scissors{
+  bottom: 10px;
+  left: 120px;
+}
+
+h3,h1{
+  font-family: 'Permanent Marker', cursive;
+}
