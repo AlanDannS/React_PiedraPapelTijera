@@ -11,16 +11,16 @@ const Tablero = () => {
     //La funcion acElemento realiza multiples envios al API que se encargaran de devolver las opciones a su estado inicial 
     const acElemento = async () => {
         await axios.post(
-            `http://localhost/api_juegoDos/?METHOD=PUT&jugador=1&value=`
+            `https://api-ppt.herokuapp.com/?METHOD=PUT&jugador=1&value=`
         );
         await axios.post(
-            `http://localhost/api_juegoDos/?METHOD=PUT&jugador=2&value=`
+            `https://api-ppt.herokuapp.com/?METHOD=PUT&jugador=2&value=`
         );
         await axios.post(
-            `http://localhost/api_juegoDos/?METHOD=PUT&jugador=1&turno=1`
+            `https://api-ppt.herokuapp.com/?METHOD=PUT&jugador=1&turno=1`
         );
         await axios.post(
-            `http://localhost/api_juegoDos/?METHOD=PUT&jugador=2&turno=0`
+            `https://api-ppt.herokuapp.com/?METHOD=PUT&jugador=2&turno=0`
         );
     };
 
@@ -28,7 +28,7 @@ const Tablero = () => {
         tambien se encarga de llamar a la funcion eleccion que llenara el state opcion.
     */
     const peticionGet = async () => {
-        const respuesta = await axios.get("http://localhost:80/api_juegoDos/");
+        const respuesta = await axios.get("https://api-ppt.herokuapp.com/");
         const { data } = respuesta;
         setJugador(data);
         eleccion();

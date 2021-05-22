@@ -6,11 +6,11 @@ const Opciones = ({jugador ,turno, ganador }) => {
     const opciones = ["rock", "paper", "scissors"];
     //Actualizar manda una actualizacion a la bd en este caso del turno del jugador 
     const actualizar = async (jugador, turno) => {
-        await axios.post(`http://localhost/api_juegoDos/?METHOD=PUT&jugador=${jugador}&turno=${turno}`);
+        await axios.post(`https://api-ppt.herokuapp.com/?METHOD=PUT&jugador=${jugador}&turno=${turno}`);
     }
     //AcElemento es una funcion que nos permite actualizar el elemento seleccionado por el jugador
     const acElemento = async (jugador, elemento) => {
-        await axios.post(`http://localhost/api_juegoDos/?METHOD=PUT&jugador=${jugador}&value=${elemento}`);
+        await axios.post(`https://api-ppt.herokuapp.com/?METHOD=PUT&jugador=${jugador}&value=${elemento}`);
     }
     //La opcion handleValue nos permite llamar a la funcion actualizar para poder modificar los turnos y las elecciones de cada jugador
     const handleValue = (elemento) => {
